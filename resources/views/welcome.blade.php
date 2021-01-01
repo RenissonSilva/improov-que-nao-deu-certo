@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Improov</title>
         
         <!-- Bulma and Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -62,6 +62,13 @@
             .logo {
                 width: 3.8em;
             }
+            .h-80{
+                height: 80vh;
+            }
+            .padding {
+                padding-top:30%;
+                text-shadow: 2px 2px 4px #000000;
+            }
         </style>
     </head>
     <body>
@@ -107,9 +114,9 @@
                     </div>
                 </div>
                 
-                <div class="column is-6">
-                    <span>Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
-                    seus conhecimentos para que você esteja mais perto da força!</span>
+                <div class="column is-8 h-80">
+                    <h1 class="padding is-size-1">Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
+                    seus conhecimentos para que você esteja mais perto da força!</h1>
                 </div>
             </div>
         </div>

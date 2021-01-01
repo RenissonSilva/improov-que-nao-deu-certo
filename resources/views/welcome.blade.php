@@ -34,6 +34,7 @@
                 background-position: 30% 45%;
                 background-size: cover;
                 padding:0 10% 0 10%;
+                margin:0!important;
             }
             .pink{
                 background-color: #F8359E!important;
@@ -43,7 +44,7 @@
                 background-color: #f754ac!important;
                 box-shadow: 0 0 1em #f754ac;
             }
-            span {
+            button > span {
                 font-weight: bold;
             }
             button {
@@ -58,41 +59,58 @@
             .register-icon-size {
                 font-size: 1.5em;
             }
+            .logo {
+                width: 3.8em;
+            }
         </style>
     </head>
     <body>
         <div class="intro">
-            <div class="level-right">
-                @auth
-                    <a href="{{ url('/dashboard') }}">
-                        <button class="button is-danger pink mx-2 my-5 p-5">
-                            <span class="icon">
-                            <i class="fas fa-home register-icon-size"></i>
-                            </span>
-                            <span>Início</span>
-                        </button>
-                    </a>
-                @else
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">
-                            <button class="button is-danger pink mx-2 my-5 p-5">
-                                <span class="icon">
-                                    <i class="fas fa-sign-in-alt register-icon-size"></i>
-                                </span>
-                                <span>Cadastrar</span>
-                            </button>
-                        </a>
-                    @endif
-                    <a href="{{ route('login') }}">
-                        <button class="button is-danger pink mx-2 my-5 p-5">
-                            <span class="icon is-large">
-                                <i class="fab fa-github github-icon-size"></i>
-                            </span>
-                            <span>Entrar com github</span>
-                        </button>
-                    </a>
-                @endauth
+            <div class="columns">
+                    <div class="pt-2 px-0 my-5">
+                        <img src="{{ url('images/logo.png') }}" class="logo">
+                    </div>
+                    <div class="column is-5 my-4">
+                        <h1 class="is-size-1">Improov</h1>
+                    </div>
+                    <div class="column has-text-right">
+                        @auth
+                            <a href="{{ url('/dashboard') }}">
+                                <button class="button is-danger pink mx-2 my-5 p-5">
+                                    <span class="icon">
+                                    <i class="fas fa-home register-icon-size"></i>
+                                    </span>
+                                    <span>Início</span>
+                                </button>
+                            </a>
+                        @else
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">
+                                    <button class="button is-danger pink mx-2 my-5 p-5">
+                                        <span class="icon">
+                                            <i class="fas fa-sign-in-alt register-icon-size"></i>
+                                        </span>
+                                        <span>Cadastrar</span>
+                                    </button>
+                                </a>
+                            @endif
+                            <a href="{{ route('login') }}">
+                                <button class="button is-danger pink mx-2 my-5 p-5">
+                                    <span class="icon is-large">
+                                        <i class="fab fa-github github-icon-size"></i>
+                                    </span>
+                                    <span>Entrar com github</span>
+                                </button>
+                            </a>
+                        @endauth
+                        
+                    </div>
+                </div>
                 
+                <div class="column is-6">
+                    <span>Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
+                    seus conhecimentos para que você esteja mais perto da força!</span>
+                </div>
             </div>
         </div>
     </body>

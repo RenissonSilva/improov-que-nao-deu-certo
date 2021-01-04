@@ -21,9 +21,10 @@
         </style>
         <style>
             * {
-                padding:0;
-                margin:0;
                 font-family: 'Saira', sans-serif;
+            }
+            .padrao {
+                padding:0 10% 0 10%;
             }
             .intro {
                 display: table;
@@ -33,7 +34,6 @@
                 background: url('images/bg-home.png') no-repeat bottom center scroll;
                 background-position: 30% 45%;
                 background-size: cover;
-                padding:0 10% 0 10%;
                 margin:0!important;
             }
             .pink{
@@ -66,13 +66,35 @@
                 height: 80vh;
             }
             .padding {
-                padding-top:30%;
                 text-shadow: 2px 2px 4px #000000;
+            }
+            .img-content {
+                width: 200px;
+                height: 200px;
+                padding-top: 0!important;
+            }
+            .title {
+                font-size: 30px;
+                margin-top: 3vh;
+                color: #000;
+            }
+            .subtitle {
+                margin-top: 2vh!important;
+                color: #575757;
+                font-size:25px;
+            }
+            .is-ancestor {
+                padding: 5vh 10vw 5vh 10vw;
+                border-bottom: 2px solid #5333A5;
+                margin-top: 12px!important;
+            }
+            .has-text-centered {
+                padding-top: 5vh!important;
             }
         </style>
     </head>
     <body>
-        <div class="intro">
+        <div class="padrao intro">
             <div class="columns">
                     <div class="pt-2 px-0 my-5">
                         <img src="{{ url('images/logo.png') }}" class="logo">
@@ -115,10 +137,81 @@
                 </div>
                 
                 <div class="column is-8 h-80">
-                    <h1 class="padding is-size-1">Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
+                    <h1 class="padding is-size-2">Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
                     seus conhecimentos para que você esteja mais perto da força!</h1>
                 </div>
             </div>
         </div>
+
+        <div class="padrao">
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child has-text-centered">
+                        <img src="{{ url('images/mission.png') }}" class="img-content">
+                    </div>
+                </div>
+                <div class="tile is-6 is-vertical is-parent">
+                    <div class="tile is-child">
+                        <p class="title">Missões diárias</p>
+                        <p class="subtitle">Tenha uma série de objetivos e desafios a serem alcançados todos os dias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="padrao">
+            <div class="tile is-ancestor">
+                <div class="tile is-6 is-vertical is-parent">
+                    <div class="tile is-child">
+                        <p class="title">Ranking</p>
+                        <p class="subtitle">Compare a sua pontuação com as de qualquer usuário do sistema.</p>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child has-text-centered">
+                        <img src="{{ url('images/ranking.png') }}" class="img-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="padrao">
+            <p class="title has-text-centered">Vantagens</p>
+        </div>
+        <div class="tile is-ancestor has-text-centered">
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child">
+                    <p class="subtitle is-12">Alcance seus objetivos</p>
+                    </article>
+                    <article class="tile is-child">
+                    <img src="{{ url('images/goals.png') }}" class="img-content">
+                    </article>
+                </div>
+            </div>
+
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child">
+                    <p class="subtitle is-12">Aperfeiçoe seus conhecimentos</p>
+                    </article>
+                    <article class="tile is-child">
+                    <img src="{{ url('images/knowledge.png') }}" class="img-content">
+                    </article>
+                </div>
+            </div>
+
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child">
+                    <p class="subtitle is-12">Promoção em cursos</p>
+                    </article>
+                    <article class="tile is-child">
+                    <img src="{{ url('images/discount.png') }}" class="img-content">
+                    </article>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

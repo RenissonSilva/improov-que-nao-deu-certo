@@ -65,8 +65,13 @@
             .h-80{
                 height: 80vh;
             }
-            .padding {
-                text-shadow: 2px 2px 4px #000000;
+            .bg-text {
+                color: #E4E4E4!important;
+                text-shadow: 3px 3px 3px #000000;
+                font-weight: normal;
+                font-size:55px!important;
+                line-height: 1.6!important;
+                letter-spacing: 1px!important;
             }
             .img-content {
                 width: 200px;
@@ -88,59 +93,94 @@
                 border-bottom: 2px solid #5333A5;
                 margin-top: 12px!important;
             }
-            .has-text-centered {
-                padding-top: 5vh!important;
+            .level {
+                padding-top: 2vh!important;
+            }
+            .is-medium{
+                width:70%;
+            }
+            .discount {
+                width:160px;
+            }
+            @media only screen and (max-width: 1400px) {
+                .is-medium{
+                    width:100%;
+                }
+                .bg-text {
+                    font-size:50px!important;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                .bg-text {
+                    font-size:40px!important;
+                }
             }
         </style>
     </head>
     <body>
         <div class="padrao intro">
-            <div class="columns">
-                    <div class="pt-2 px-0 my-5">
+            <nav class="level">
+                <!-- Left side -->
+                <div class="level-left">
+                    <div class="level-item">
                         <img src="{{ url('images/logo.png') }}" class="logo">
                     </div>
-                    <div class="column is-5 my-4">
+                    <div class="level-item">
                         <h1 class="is-size-1">Improov</h1>
                     </div>
-                    <div class="column has-text-right">
-                        @auth
-                            <a href="{{ url('/dashboard') }}">
-                                <button class="button is-danger pink mx-2 my-5 p-5">
+                </div>
+
+                <!-- Right side -->
+                <div class="level-right has-text-centered">
+                    @auth
+                        <a href="{{ url('/dashboard') }}">
+                            <button class="button is-danger pink mx-2 p-5">
+                                <span class="icon">
+                                <i class="fas fa-home register-icon-size"></i>
+                                </span>
+                                <span>Início</span>
+                            </button>
+                        </a>
+                    @else
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">
+                                <button class="button is-danger pink mx-2 p-5">
                                     <span class="icon">
-                                    <i class="fas fa-home register-icon-size"></i>
+                                        <i class="fas fa-sign-in-alt register-icon-size"></i>
                                     </span>
-                                    <span>Início</span>
+                                    <span>Cadastrar</span>
                                 </button>
                             </a>
-                        @else
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}">
-                                    <button class="button is-danger pink mx-2 my-5 p-5">
-                                        <span class="icon">
-                                            <i class="fas fa-sign-in-alt register-icon-size"></i>
-                                        </span>
-                                        <span>Cadastrar</span>
-                                    </button>
-                                </a>
-                            @endif
-                            <a href="{{ route('login') }}">
-                                <button class="button is-danger pink mx-2 my-5 p-5">
-                                    <span class="icon is-large">
-                                        <i class="fab fa-github github-icon-size"></i>
-                                    </span>
-                                    <span>Entrar com github</span>
-                                </button>
-                            </a>
-                        @endauth
-                        
+                        @endif
+                        <a href="{{ route('login') }}">
+                            <button class="button is-danger pink mx-2 p-5">
+                                <span class="icon is-large">
+                                    <i class="fab fa-github github-icon-size"></i>
+                                </span>
+                                <span>Entrar com github</span>
+                            </button>
+                        </a>
+                    @endauth
+                </div>
+            </nav>
+
+            <!-- <div class="column is-8 h-80">
+                <h1 class="padding is-size-2">Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
+                seus conhecimentos para que você esteja mais perto da força!</h1>
+            </div> -->
+
+            <section class="hero is-medium">
+                <div class="hero-body"></div>
+
+                <div class="hero-foot">
+                    <div class="container">
+                    <p class="bg-text is-size-1">
+                        Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
+                        seus conhecimentos para que você esteja mais perto da força!
+                        </p>
                     </div>
                 </div>
-                
-                <div class="column is-8 h-80">
-                    <h1 class="padding is-size-2">Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
-                    seus conhecimentos para que você esteja mais perto da força!</h1>
-                </div>
-            </div>
+            </section>
         </div>
 
         <div class="padrao">
@@ -176,7 +216,7 @@
         </div>
 
         <div class="padrao">
-            <p class="title has-text-centered">Vantagens</p>
+            <p class="title has-text-centered pt-5">Vantagens</p>
         </div>
         <div class="tile is-ancestor has-text-centered">
             <div class="tile">
@@ -207,7 +247,7 @@
                     <p class="subtitle is-12">Promoção em cursos</p>
                     </article>
                     <article class="tile is-child">
-                    <img src="{{ url('images/discount.png') }}" class="img-content">
+                    <img src="{{ url('images/discount.png') }}" class="img-content discount">
                     </article>
                 </div>
             </div>

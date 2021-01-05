@@ -102,6 +102,17 @@
             .discount {
                 width:160px;
             }
+            .tile.is-ancestor:not(:last-child) {
+                margin-bottom: 0;
+            }
+            .reset-level {
+                margin-bottom: 0!important;
+                padding: 0 10vw 0 10vw;
+            }
+            a:hover{
+                color: #ccc!important;
+            }
+
             @media only screen and (max-width: 1400px) {
                 .is-medium{
                     width:100%;
@@ -120,7 +131,6 @@
     <body>
         <div class="padrao intro">
             <nav class="level">
-                <!-- Left side -->
                 <div class="level-left">
                     <div class="level-item">
                         <img src="{{ url('images/logo.png') }}" class="logo">
@@ -130,7 +140,6 @@
                     </div>
                 </div>
 
-                <!-- Right side -->
                 <div class="level-right has-text-centered">
                     @auth
                         <a href="{{ url('/dashboard') }}">
@@ -163,11 +172,6 @@
                     @endauth
                 </div>
             </nav>
-
-            <!-- <div class="column is-8 h-80">
-                <h1 class="padding is-size-2">Viemos para te ajudar a focar em seus objetivos e a aperfeiçoar
-                seus conhecimentos para que você esteja mais perto da força!</h1>
-            </div> -->
 
             <section class="hero is-medium">
                 <div class="hero-body"></div>
@@ -220,7 +224,7 @@
         </div>
         <div class="tile is-ancestor has-text-centered">
             <div class="tile">
-                <div class="tile is-parent is-vertical">
+                <div class="tile is-parent is-vertical mb-6">
                     <article class="tile is-child">
                     <p class="subtitle is-12">Alcance seus objetivos</p>
                     </article>
@@ -231,7 +235,7 @@
             </div>
 
             <div class="tile">
-                <div class="tile is-parent is-vertical">
+                <div class="tile is-parent is-vertical mb-6">
                     <article class="tile is-child">
                     <p class="subtitle is-12">Aperfeiçoe seus conhecimentos</p>
                     </article>
@@ -242,7 +246,7 @@
             </div>
 
             <div class="tile">
-                <div class="tile is-parent is-vertical">
+                <div class="tile is-parent is-vertical mb-6">
                     <article class="tile is-child">
                     <p class="subtitle is-12">Promoção em cursos</p>
                     </article>
@@ -253,5 +257,49 @@
             </div>
         </div>
 
+        <!-- <nav class="level reset-level" style="background-color:#5333A5;">
+        <div class="level-left has-text-white">
+            <div class="level-item">
+                <h1 class="is-size-1">Improov</h1>
+            </div>
+        </div>
+
+        </nav> -->
+
+        <div class="tile is-ancestor" style="background-color:#5333A5;margin-top:0px!important;">
+            <div class="tile is-parent is-justify-content-center">
+                <article class="tile is-child is-10">
+                <p class="is-size-3 has-text-white has-text-centered mb-5 has-text-weight-bold">Quem somos</p>
+                <p class="is-size-4 has-text-white">Uma equipe de desenvolvedores em busca de trazer ferramentas que auxiliem na sua vida</p>
+                </article>
+            </div>
+            <div class="tile is-parent is-justify-content-center">
+                <article class="tile is-child is-10">
+                <p class="is-size-3 has-text-white has-text-centered mb-5 has-text-weight-bold">Nosso objetivo</p>
+                <p class="is-size-4 has-text-white">Estimular desenvolvedores para que melhorem seus conhecimentos e não percam seu foco</p>
+                </article>
+            </div>
+        </div>
+
+        <nav class="level reset-level" style="background-color:#5333A5;padding-bottom: 2rem;">
+            <div class="level-left has-text-white">
+                <div class="level-item">
+                    <img src="{{ url('images/logo.png') }}" class="logo">
+                </div>
+                <div class="level-item">
+                    <h1 class="is-size-3 has-text-weight-bold">Improov</h1>
+                </div>
+            </div>
+
+            <div class="level-right has-text-white">
+                <div class="level-item">
+                    <a href="#" class="is-size-4 has-text-weight-bold">Fale conosco</a>
+                </div>
+                <div class="level-item">
+                    <a href="#" class="is-size-4 has-text-weight-bold">Ajuda</a>
+                </div>
+            </div>
+        </nav>
+        
     </body>
 </html>

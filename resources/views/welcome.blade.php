@@ -112,6 +112,9 @@
             a:hover{
                 color: #ccc!important;
             }
+            .tamanho-fonte {
+                font-size: 28px;
+            }
 
             @media only screen and (max-width: 1400px) {
                 .is-medium{
@@ -257,26 +260,27 @@
             </div>
         </div>
 
-        <!-- <nav class="level reset-level" style="background-color:#5333A5;">
-        <div class="level-left has-text-white">
-            <div class="level-item">
-                <h1 class="is-size-1">Improov</h1>
+        <!--
+        <nav class="level reset-level" style="background-color:#5333A5;">
+            <div class="level-left has-text-white">
+                <div class="level-item">
+                    <h1 class="is-size-1">Improov</h1>
+                </div>
             </div>
-        </div>
-
-        </nav> -->
+        </nav>
+        -->
 
         <div class="tile is-ancestor" style="background-color:#5333A5;margin-top:0px!important;">
             <div class="tile is-parent is-justify-content-center">
                 <article class="tile is-child is-10">
                 <p class="is-size-3 has-text-white has-text-centered mb-5 has-text-weight-bold">Quem somos</p>
-                <p class="is-size-4 has-text-white">Uma equipe de desenvolvedores em busca de trazer ferramentas que auxiliem na sua vida</p>
+                <p class="tamanho-fonte has-text-white">Uma equipe de desenvolvedores em busca de trazer ferramentas que auxiliem na sua vida</p>
                 </article>
             </div>
             <div class="tile is-parent is-justify-content-center">
                 <article class="tile is-child is-10">
                 <p class="is-size-3 has-text-white has-text-centered mb-5 has-text-weight-bold">Nosso objetivo</p>
-                <p class="is-size-4 has-text-white">Estimular desenvolvedores para que melhorem seus conhecimentos e não percam seu foco</p>
+                <p class="tamanho-fonte has-text-white">Estimular desenvolvedores para que melhorem seus conhecimentos e não percam seu foco</p>
                 </article>
             </div>
         </div>
@@ -292,10 +296,10 @@
             </div>
 
             <div class="level-right has-text-white">
-                <div class="level-item">
+                <div class="level-item mx-5">
                     <a href="#" class="is-size-4 has-text-weight-bold">Fale conosco</a>
                 </div>
-                <div class="level-item">
+                <div class="level-item mx-5">
                     <a href="#" class="is-size-4 has-text-weight-bold">Ajuda</a>
                 </div>
             </div>
